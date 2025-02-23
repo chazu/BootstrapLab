@@ -5,7 +5,7 @@ source ./code/prelude
 
 recv=$1
 echo "send" > /dev/tty
-echo "-> test receiver $recv" > /dev/tty
+echo " -> test receiver $recv" > /dev/tty
 
 # If it doesn't exist, fail
 if [ ! -e $recv ]; then
