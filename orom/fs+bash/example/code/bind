@@ -4,8 +4,11 @@ set -euo pipefail
 recv=$1
 selector=$2
 
-if [[ $selector == "lookup" ]] && [[ ${recv##*/} == "vtable-vt" ]]; then
+echo "bind $recv $selector" > /dev/tty
+if [[ $selector == "lookup" ]] && [[ $(basename $recv) == "vtable-vt" ]]; then
+  echo " -> lookup (vtable)" > /dev/tty
   ./code/vtable.lookup $recv $selector
 else
+  echo " -> send" > /dev/tty
   ./code/send $recv/vtable lookup $selector
 fi
