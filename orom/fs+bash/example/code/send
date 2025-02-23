@@ -9,7 +9,7 @@ echo "-> test receiver $recv" > /dev/tty
 
 # If it doesn't exist, fail
 if [ ! -e $recv ]; then
-  echo " -> File does not exist, exiting..."
+  echo " -> File does not exist, exiting..." > /dev/tty
   exit 1
 fi
 
