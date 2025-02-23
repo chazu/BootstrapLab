@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+source ./code/prelude
+
 rcv=$1; shift
 msg=$1; shift
 
-./code/send ../$rcv $msg $@
+./code/send $rcv $msg $@
