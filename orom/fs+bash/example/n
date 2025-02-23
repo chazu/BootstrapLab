@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rcv=shift
+msg=shift
+
+./code/send ../$rcv $msg $@

@@ -11,5 +11,5 @@ selector=$2
 shift
 shift
 
-path_to_impl=$(./bind $recv $selector)
+path_to_impl=$(./code/bind $recv $selector)
 $path_to_impl $recv "$@"

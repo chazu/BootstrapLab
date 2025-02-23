@@ -5,7 +5,7 @@ recv=$1
 selector=$2
 
 if [[ $selector == "lookup" ]] && [[ ${recv##*/} == "vtable-vt" ]]; then
-  ./vtable.lookup $recv $selector
+  ./code/vtable.lookup $recv $selector
 else
-  ./send $recv/vtable lookup $selector
+  ./code/send $recv/vtable lookup $selector
 fi
