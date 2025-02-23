@@ -12,5 +12,5 @@ if [[ $selector == "lookup" ]] && [[ $(basename $recv) == "vtable-vt" ]]; then
   $N_CODE_PATH/vtable.lookup $recv $selector
 else
   echo " -> send" > /dev/tty
-  $N_CODE_PATH/send $N_BASE_PATH/vtable lookup $selector
+  $N_CODE_PATH/send $N_BASE_PATH/$recv/vtable lookup $selector
 fi
