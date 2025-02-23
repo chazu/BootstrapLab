@@ -1,0 +1,8 @@
+# Export common vars and functions used by primitive functions
+# - normalize paths
+# - ???
+
+export N_PRELUDE_PATH=$(realpath $0)
+export N_CODE_PATH=$(dirname $N_PRELUDE_PATH)
+export N_CODE_PATH=$(dirname $N_PRELUDE_PATH)
+export N_BASE_PATH=$(dirname $N_CODE_PATH)

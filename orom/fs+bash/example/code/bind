@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+source ./code/prelude
+
 recv=$1
 selector=$2
 
 echo "bind $recv $selector" > /dev/tty
 if [[ $selector == "lookup" ]] && [[ $(basename $recv) == "vtable-vt" ]]; then
   echo " -> lookup (vtable)" > /dev/tty
-  ./code/vtable.lookup $recv $selector
+  $N_CODE_PATH/vtable.lookup $recv $selector
 else
   echo " -> send" > /dev/tty
-  ./code/send $recv/vtable lookup $selector
+  $N_CODE_PATH/send $N_BASE_PATH/vtable lookup $selector
 fi

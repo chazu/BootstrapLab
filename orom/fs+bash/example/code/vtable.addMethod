@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+source ./code/prelude
+
 recv=$1
 selector=$2
 impl=$3
